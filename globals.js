@@ -1,0 +1,1 @@
+var currentFqdn = "https://ecosystem.cloudogu.com";

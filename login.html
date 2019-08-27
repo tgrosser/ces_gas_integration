@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+  function updateInfo(form) {
+    google.script.run.ces_authenticate(form.instance.value, form.username.value, form.password.value);
+    google.script.host.close();
+  }
+</script>
+</head>
+<body>
+<form>
+  Cloudogu EcoSystem Instance:
+  <input type="text" name="instance" value="https://ecosystem.cloudogu.com"><br/>
+  Username:
+  <input type="text" name="username"><br/>
+  Password:
+  <input type="password" name="password"><br/>
+  <input type="button" value="Cancel" onclick="google.script.host.close()" />
+  <input type="button" value="Login" onclick="updateInfo(this.form)" />
+  
+</form>
+
+</body>
+</html>
